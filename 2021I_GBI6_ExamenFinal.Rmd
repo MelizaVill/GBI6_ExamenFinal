@@ -83,16 +83,18 @@ getwd()
 
 ### [0.5 PUNTOS] 1.2. Cargue la data "mRNA_expr.csv"
 ```{r data}
-df <- "mRNA_expr.csv"
-
+df <- "C:/Users/Asus/Documents/CSB/GBI6_ExamenFinal/data/mRNA_expr.csv"
+mRNA <- read.csv(df)
+head(mRNA)
 ```
 
 ### [1 PUNTO] 1.3 Cree una función de nombre ```long_df``` para transformar la data ```df``` de la forma wide a long.
 
 ```{r funcion_long}
 # Escriba aquí la función long_df
-
-
+long_df <- gather(bcr_patient_barcode,"dataset", "GATA3", "PIEN", "XBP1", "ESR1", "MUC1", "FN1", "GAPDH")[
+return(resultado)
+]
 ```
 
 
