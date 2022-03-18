@@ -234,8 +234,7 @@ reg_genplots
 
 graficos_cancer <- reg_genplots("GATA3")
 graficos_cancer[[5]][[2]]
-ggsave("C:/Users/ASUS/Documents/CSB/GBI6_ExamenFinal/results/regresion11.pdf", width = 2, height = 4, dpi = 50)
-
+ggsave("C:/Users/ASUS/Documents/CSB/GBI6_ExamenFinal/results/regresion11.pdf", width = 4, height = 6, dpi = 100)
 ```
 
 
