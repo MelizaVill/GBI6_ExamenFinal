@@ -237,27 +237,14 @@ width = 4, height = 6, dpi = 100)
 
 ### [1 PUNTO] 2.7. Interprete los resultados de las figuras ```boxplot3.png``` y ```regresion11.pdf```.
 
-```{tex}
 # Esciba aquí su intepretación
-# Bloxplot
-#El diagrama de cajas se corrobora que la distribución de los datos de las 
-#expresiones de genes no presentan una distribución normal, por lo cual se 
-#obseva que los datos estan distribuidos de forma asimétrica con respecto 
-#al valor central. Adedmás, se observa la presencia de datos una alta cantidad 
-#de valores atípicos, lo que nos lleva a inferir que son situaciones poco 
-#comun, o los datos son productos de algún fenómeno.
-# Regresion
-#A simple vista se osberva que los valores de expresion de los genes "PTEN" 
-#y "GAPDH", estan concentrados en un solo lugar, no obstante tambien existen 
-#una minoria valores lejanos al concentrado. Por otro las regresiones para 
-#BRCA, LUSC, UCEC y KIRT muestran unarelación proporcionalmente inversa entre 
-#los genes "PTEN" y "GAPDH", es decir, si aumenta el nivel de expresión de 
-#"PTEN", dismiye el nivel de expresion del gen "GAPDH", mientas que para KIPAN 
-#y OV ocurre lo inverso, por tanto existe una relacion directamente 
-#proporcional, si aumenta el nivel de expresión del gen "PTEN", aumenta el nivel 
-#de expresion de "GAPDH".
+# Bloxplot 3 de la imagen
+**Los genes expresados en este grafico no tienen una distribucion normal, siendo evidente su forma asimetrica**
+# Regresion del pdf
+**Los dos genes "PTEN" y "GAPDH" se encuentran juntos, y las regresiones para 
+BRCA, LUSC, UCEC y KIRT muestran una relación proporcionalmente inversa por ejemplo si aumenta el nivel de expresión de "PTEN", dismiye el nivel de expresion del gen "GAPDH", y para los otros genes es proporcionalmente directo**
 
-```
+
 
 ## 3. CONTROL DE LA VERSIÓN [1 PUNTO]. Se verficará en ell repositorio de GitHub. 
 
