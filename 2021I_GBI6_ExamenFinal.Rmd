@@ -160,7 +160,7 @@ cancer <- list(BRCA <- filter(df_long, dataset == "BRCA"), OV <- filter(df_long,
 )
 head(cancer)
 cancertype_boxplots = lapply(cancer, function(x) {ggplot(x, aes(dataset, expresion_level, col = dataset)) +
-    geom_boxplot() + theme(legend.position='none') + labs(x = "", y = "Expression level")})
+    geom_boxplot() + theme(legend.position='none') + labs(x = "", y = "Expression Level")})
 ggsave("C:/Users/ASUS/Documents/CSB/GBI6_ExamenFinal/results/IMAGEN 2_2.png", width = 6, height = 8, dpi = 300)
 ```
 
