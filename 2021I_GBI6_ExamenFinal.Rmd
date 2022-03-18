@@ -127,12 +127,8 @@ descr(cancermama) %>% tab_df(title = "Descripcion del cancer de mama",
 
 ### [0.5 PUNTOS] 1.6 Interprete los resultados de la tabla resultante de la sección 1.5. 
 
-
-```{tex}
-# Escriba aquí su interpretación 
-
-```
-
+**criba aquí su interpretación 
+En base a las tablas se observa que existen una mayor cantidad de datos para el Carcinoma invasivo de mama (BRCA) en el cual se expresa con mayor nivel el gen En todas estas tablas existe gran cantidad de datos para el cancer de mama identificado con (BRCA) que expresa el gen (ESR1), tambien del riñon identificado con (KIPAN), expresando el gen (PTEN), el cancer renal identificado con (KIRP) con espresion del gen (PTEN), para el cancer de celulas escamossa sidentificado con (LUSC) expresando el gen(MUC1) ,tambien el seroso de ovario (OV) expresando el gen (FN1)  por ultimo el cuerpo uterino (UCEC) expresando el gen ESR1 cada uno de estos con diferentes promedios**
 
 
 ## **Pregunta 2 VISUALIZACION DE DATOS  [5 PUNTOS]**
@@ -180,7 +176,7 @@ ggsave("C:/Users/ASUS/Documents/CSB/GBI6_ExamenFinal/results/boxplot3.png", widt
 
 ```{r reg_gen_exp}
 # Escriba aquí su función reg_gen_expression
-dataset_type <- list(
+r_gen_expression <- list(
     BRCA <- filter(df_long, dataset == "BRCA"),
     OV <- filter(df_long, dataset == "OV"),
     LUSC <- filter(df_long, dataset == "LUSC"),
@@ -231,10 +227,11 @@ reg_genplots
 ### [0.5 PUNTOS] 2.6. Guarde en el subdirectorio ```result``` el onceavo plot de la lista ```reg_genplots``` con el nombre ```regresion11.pdf```. La definición de a figura debe ser de 300dpi. 
 ```{r reg11}
 # Escriba el código para guardar el onceavo plot. 
+grafico <- reg_genplots("GATA3")
+grafico[[5]][[2]]
+ggsave("C:/Users/ASUS/Documents/CSB/GBI6_ExamenFinal/results/regresion11.pdf",
+width = 4, height = 6, dpi = 100)
 
-graficos_cancer <- reg_genplots("GATA3")
-graficos_cancer[[5]][[2]]
-ggsave("C:/Users/ASUS/Documents/CSB/GBI6_ExamenFinal/results/regresion11.pdf", width = 4, height = 6, dpi = 100)
 ```
 
 
@@ -242,6 +239,23 @@ ggsave("C:/Users/ASUS/Documents/CSB/GBI6_ExamenFinal/results/regresion11.pdf", w
 
 ```{tex}
 # Esciba aquí su intepretación
+# Bloxplot
+#El diagrama de cajas se corrobora que la distribución de los datos de las 
+#expresiones de genes no presentan una distribución normal, por lo cual se 
+#obseva que los datos estan distribuidos de forma asimétrica con respecto 
+#al valor central. Adedmás, se observa la presencia de datos una alta cantidad 
+#de valores atípicos, lo que nos lleva a inferir que son situaciones poco 
+#comun, o los datos son productos de algún fenómeno.
+# Regresion
+#A simple vista se osberva que los valores de expresion de los genes "PTEN" 
+#y "GAPDH", estan concentrados en un solo lugar, no obstante tambien existen 
+#una minoria valores lejanos al concentrado. Por otro las regresiones para 
+#BRCA, LUSC, UCEC y KIRT muestran unarelación proporcionalmente inversa entre 
+#los genes "PTEN" y "GAPDH", es decir, si aumenta el nivel de expresión de 
+#"PTEN", dismiye el nivel de expresion del gen "GAPDH", mientas que para KIPAN 
+#y OV ocurre lo inverso, por tanto existe una relacion directamente 
+#proporcional, si aumenta el nivel de expresión del gen "PTEN", aumenta el nivel 
+#de expresion de "GAPDH".
 
 ```
 
